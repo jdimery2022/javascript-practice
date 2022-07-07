@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // ---Daily Challenge COMPLETED ON 7/7/2022 BEFORE CLASS----
+        // Create a new codepen
+        // Write a function that accepts a number as an argument
+        // Alert the user whether the given number is even or odd
+        // Call your function
+
+        const number = parseInt(prompt('please enter a number', 2.));
+        if (number === undefined) {
+        number = 2;
+        }  
+        console.log(number);
+         if(number % 2 == 0) {
+        console.log("The number is even.");
+        }
+        // if the number is odd
+        else {
+        console.log("The number is odd.");
+        }
+         const result = (number % 2  == 0) ? "even" : "odd";
+        console.log('The mumber is ${result},');
+        alert( result);
+        </script>
+</body>
+</html>

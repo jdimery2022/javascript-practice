@@ -1,0 +1,213 @@
+JavaScript Variables
+4 Ways to Declare a JavaScript Variable:
+Using var
+Using let
+Using const
+Using nothing
+What are Variables?
+Variables are containers for storing data (storing data values).
+JavaScript Dollar Sign $
+Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:
+
+Example
+let $ = "Hello World";
+let $$$ = 2;
+let $myMoney = 5;
+
+In this example, x, y, and z, are variables, declared with the var keyword:
+
+Example
+var x = 5;
+var y = 6;
+var z = x + y;
+In this example, x, y, and z, are variables, declared with the let keyword:
+
+Example
+let x = 5;
+let y = 6;
+let z = x + y;
+In this example, x, y, and z, are undeclared variables:
+
+Example
+x = 5;
+y = 6;
+z = x + y;
+From all the examples above, you can guess:
+
+x stores the value 5
+y stores the value 6
+z stores the value 11
+When to Use JavaScript var?
+Always declare JavaScript variables with var,let, orconst.
+
+The var keyword is used in all JavaScript code from 1995 to 2015.
+
+The let and const keywords were added to JavaScript in 2015.
+
+If you want your code to run in older browser, you must use var.
+
+When to Use JavaScript const?
+If you want a general rule: always declare variables with const.
+
+If you think the value of the variable can change, use let.
+
+In this example, price1, price2, and total, are variables:
+
+Example
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+The two variables price1 and price2 are declared with the const keyword.
+
+These are constant values and cannot be changed.
+
+The variable total is declared with the let keyword.
+
+This is a value that can be changed.
+
+Just Like Algebra
+Just like in algebra, variables hold values:
+
+let x = 5;
+let y = 6;
+Just like in algebra, variables are used in expressions:
+
+let z = x + y;
+From the example above, you can guess that the total is calculated to be 11.
+
+Note
+Variables are containers for storing values.
+
+
+Declaration of Variables
+
+Variables are the basic unit of storage in a programming language. These variables consist of
+a data type, the variable name, and the value to be assigned to the variable. Unless and until 
+the variables are declared and initialized, they cannot be used in the program. Let us learn more
+about the Declaration and Initialization of Variables in this article below.
+
+What is Declaration and Initialization?
+Declaring a JavaScript Variable
+Creating a variable in JavaScript is called "declaring" a variable.
+
+You declare a JavaScript variable with the var or the let keyword:
+
+var carName;
+or:
+let carName;
+After the declaration, the variable has no value (technically it is undefined).
+
+To assign a value to the variable, use the equal sign:
+
+carName = "Volvo";
+You can also assign a value to the variable when you declare it:
+
+let carName = "Volvo";
+In the example below, we create a variable called carName and assign the value "Volvo" to it.
+
+Then we "output" the value inside an HTML paragraph with id="demo":
+
+Example
+<p id="demo"></p>
+
+<script>
+let carName = "Volvo";
+document.getElementById("demo").innerHTML = carName;
+</script>
+Note
+It's a good programming practice to declare all variables at the beginning of a script.
+
+One Statement, Many Variables
+You can declare many variables in one statement.
+
+Start the statement with let and separate the variables by comma:
+
+Example
+let person = "John Doe", carName = "Volvo", price = 200;
+A declaration can span multiple lines:
+
+Example
+let person = "John Doe",
+carName = "Volvo",
+price = 200;
+Value = undefined
+In computer programs, variables are often declared without a value. The value can be 
+something that has to be calculated, or something that will be provided later, like user input.
+
+A variable declared without a value will have the value undefined.
+
+The variable carName will have the value undefined after the execution of this statement:
+
+Example
+let carName;
+Re-Declaring JavaScript Variables
+If you re-declare a JavaScript variable declared with var, it will not lose its value.
+
+The variable carName will still have the value "Volvo" after the execution of these statements:
+
+Example
+var carName = "Volvo";
+var carName;
+Declaration of a variable in a computer programming language is a statement used to specify 
+the variable name and its data type. Declaration tells the compiler about the existence of 
+an entity in the program and its location. When you declare a variable, you should also initialize it.
+Initialization is the process of assigning a value to the Variable. Every programming language has its 
+own method of initializing the variable. If the value is not assigned to the Variable, then the process
+is only called a Declaration.
+Basic Syntax
+The basic form of declaring a variable is:
+
+            type identifier [= value] [, identifier [= value]]…];
+
+                                                OR
+
+            data_type variable_name = value;
+
+where,
+
+type = Data type of the variable
+
+identifier = Variable name
+
+value = Data to be stored in the variable (Optional field)
+
+Note 1: The Data type and the Value used to store in the Variable must match.
+
+Note 2: All declaration statements must end with a semi-colon (;)
+
+Example
+
+COPY CODE
+                    
+int a, b, c;                       // declare 3 variables.
+
+int z = 35;                      // declare and initialize variable z with value 35.
+
+double pi = 3.14159;   // declare an approximation of pi.
+
+char x, y = ‘y’, z;           // declare 3 variables, initialize char y with value ‘y’.
+
+char str[30];                 // declare an array named ‘str’ which holds 30 characters.
+Block Scope
+Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block:
+
+Example
+{
+  let x = 2;
+}
+// x can NOT be used here
+Variables declared with the var keyword can NOT have block scope.
+
+Variables declared inside a { } block can be accessed from outside the block.
+
+Example
+{
+  var x = 2;
+}
+// x CAN be used here
