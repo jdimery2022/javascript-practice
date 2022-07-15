@@ -62,15 +62,18 @@
 
     //function
 
+    const firstNumber = getValidDigit('first');
+    const secondNumber = getValidDigit('second');
+    alert(firstNumber - secondNumber);
+
     function getValidDigit(iteration){
-        let number = prompt('enter ${iteration}
-        number');
-        if (isNaN(number)) {
-        alert('This is not a number. Please enter digits olny');
+    let number = prompt(`enter ${iteration} number`);
+    if (isNaN(number)) {
+        alert('hey this is not a number. please enter digits only');
         return getValidDigit(iteration);
-        }
-        return number;
-        }
+    }
+    return number;
+    }
 
 
 
@@ -105,9 +108,7 @@ if (firstName){
     console.log('firstName  is truthy');
 }
 
-if (!firstName) || !lastName || true) {
-    alert('you must enter your first and last name');
-}
+
 
 //  comparison operators
 // == equal to

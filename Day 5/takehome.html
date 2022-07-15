@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
-<body>
-    <!-- // Take Home Challenge:  NEED TO COMPLETE
-    // Write a function that accepts a password (string)
-    // Validate the password using the following rules:
-    // Must be 6-20 characters long
-    // Must start with a letter
-    // Alert the user if their password has been accepted or why their password was rejected -->
+	<body>
+	<script>
+		// Take Home Challenge:  NEED TO COMPLETE
+		// Write a function that accepts a password (string)
+		// Validate the password using the following rules:
+		// Must be 6-20 characters long
+		// Must start with a letter
+		// Alert the user if their password has been accepted or why their password was rejected
+		const password = prompt('Enter your password');
+		let isValid = true;
+		if (password.length < 5){
+			isValid = false;
+			alert('Password is invalid - it must be at least 6 characters long');
+		}
+		if (password.length > 20){
+			isValid = false;
+			alert('Password is invalid - it must be less than 21 characters long');
+		}
+		const validFirstCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+		if (!validFirstCharacters.includes(password[0].toLowerCase())){
+			isValid = false;
+			alert('Password is invalid - it must start with a letter');
+		}
 
-    
-</body>
+		if (isValid){
+			alert('Password is valid');
+		}
+
+	</script>
+	</body>
 </html>

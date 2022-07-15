@@ -9,25 +9,37 @@
 <body>
    
 <script>
-    const num1 = parseFloat(prompt("Enter first number: "));
-    const num2 = parseFloat(prompt("Enter second number: "));
-    
-    let largest;
+        // ------------ TAKE HOME CHALLENGE: COMPLETED ON 7/7/2022 ------------
+        // Add an edge case to your daily challenge code
+        // Check if the user input anything other than a number
+        // If so, prompt the user again to input a number
 
-    // check the condition
-    if (num1 >= num2 && num1){
-        largest = num1;
-    }
-    else if (num2 >= num1 && num2) {
-        largest = num2;
-    }
-    
-    if (!largest){ prompt("Please try again and enter your number")}; 
+       
 
-    // display the result
-    console.log("The largest number is " + largest);
+        // get elements
+        const num1 = parseInt(prompt("Enter first number: "));
+        const num2 = parseInt(prompt("Enter second number: "));
+
+        let largest;
+
+        // check the condition
+        if (num1 >= num2 ) {
+            largest = num1;
+
+        }
         
-    alert(largest);
+        else if (num2 > num1 ) {
+            largest = num2;
+        }
+
+
+        // display the result
+        console.log("The largest number is " + largest);
+        if (!largest){ prompt("Please try again and enter your number")}; 
+        alert(largest);
+
+        
+   
     </script>
 </body>
 </html>
