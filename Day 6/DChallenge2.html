@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src=".js/main1.js"></script>
+<body>
+    // Daily Challenge
+// What is the output for the following examples (below)?
+
+<script>
+
+// ========================= EXAMPLE 2 =========================
+function job(state) {
+    return new Promise(function(resolve, reject) {
+        if (state) {
+            resolve('success');
+        } else {
+            reject('error');
+        }
+    });
+}
+
+let promise = job(true);
+
+promise
+
+.then(function(data) {
+    console.log(data);
+
+    return job(false);
+})
+
+.catch(function(error) {
+    console.log(error);
+
+    return 'Error caught';
+})
+
+.then(function(data) {
+    console.log(data);
+
+    return job(true);
+})
+
+.catch(function(error) {
+    console.log(error);
+});
+</script>
+</body>
+</html>

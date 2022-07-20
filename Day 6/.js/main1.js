@@ -6,7 +6,7 @@
 // 5.The global property NaN
 // 6.A number or BigInt representing 0 ( 0, -0, 0.0, -0.0, 0n)
 
-
+// most modern developers will not use var
 
 
 // call backs are basically functions
