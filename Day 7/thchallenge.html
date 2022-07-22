@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // completed in class on Thursday 7/21/2022 by BRYCE //
+        const catFaxButton = document.createElement('button')
+catFaxButton.innerHTML = "Get the cat fax 👵🏾🐈‍⬛"
+catFaxButton.addEventListener('click', getRandomCatFact)
+
+const BODY = document.querySelector('body')
+
+
+BODY.appendChild(catFaxButton)
+
+function getRandomCatFact() {
+    console.dir(document)
+    fetch('https://cat-fact.herokuapp.com/facts/random')
+    .then(res => {
+        console.log(res)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+        const catFact = document.createElement('p')
+        catFact.innerHTML = `Here is your cat fact :)... ${data.text}`
+        BODY.append(catFact)
+    })
+}
+
+    </script>
+</body>
+</html>
