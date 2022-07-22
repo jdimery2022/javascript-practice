@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    
-    <script defer src="./js/dogdchallenge.js"></script>
+    <script defer src=".js/dogdchallenge.js"></script>
 
 </head>
 <body>
@@ -20,33 +20,6 @@ Let's teach it some tricks
 Give your dog a property called “speak” and assign a function that will alert “woof!”
 Add another method to teach your dog one more trick
 BONUS: Display your dog object values in HTML -->
-<script>
-    const dog = {
-    name: 'Fido',
-    description: 'A friendly dog',
-    speak: function() {
-        alert(`${this.name} says woof!`);
-    },
-    washDishes: function() {
-        alert(`${this.name} washes dishes!`);
-    }
-}
 
-
-const button = document.createElement('button');
-document.body.appendChild(button);
-button.innerText = 'Speak';
-button.addEventListener('click', function() {
-    dog.speak();
-});
-
-const button2 = document.createElement('button');
-document.body.appendChild(button2);
-button2.innerText = 'Wash dishes';
-button2.addEventListener('click', function() {
-    dog.washDishes();
-});
-
-</script>
 </body>
 </html>
