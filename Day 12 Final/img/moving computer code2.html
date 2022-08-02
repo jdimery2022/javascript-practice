@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <base href=".."/>
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27302158-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-27302158-1');
+    </script>
+    <title>Animated GIFs the Easy Way : Will Edward&#39;s Programming</title>
+    <!--
+    <post>
+<title>Animated GIFs the Easy Way</title>
+<date>2013-11-07</date>
+<tag>lang</tag>
+</post>
+    -->
+    
+</head>
+<body>
+<div class="content">
+<div class="column">
+    <div style="width: 90%;" class="page-link" onclick="window.location='index.html'">
+    <h1>Will Edwards<br/><i>programming</i></h1>
+    </div>
+    <p><b>I have always loved programming</b> - its like Lego without gravity.</p>
+    <p>Basic on my ZX81 graduating to assembler and Turbo Pascal during my teens.</p>
+    <p>Developed phone OS software - engineer, architect, product manager - but got made irrelevant by the
+        iPhone and redundant by Android.</p>
+    <p style="font-size: 16pt; width:90%;">These days I mostly work with <b>data</b>, <b>big data</b> and <b><i>fitting big data onto small boxes</i></b>.</p>
+</div>
+<div class="posts-column column">
+<div class="page-title"><h1>Animated GIFs the Easy Way</h1></div>
+<div class="post">
+<post-body><p>The article “<a href="https://www.sublimetext.com/~jps/animated_gifs_the_hard_way.html">Animated GIFs the Hard Way</a>”
+                has got some <a alt="dead link: http://www.reddit.com/r/programming/comments/1q2udb/animated_gifs_the_hard_way_sublime_text_2/" href="/#404">attention</a>
+                again.  I recall enjoying the article back when it was first published.</p>
+                <p>I had just one concern, though… why not just use GIF?</p>
+                <p>The perceived problem is that GIFs are a) large and b) are limited to 256 colours.</p>
+                <p>Well, first lets kill the 256 colours thing: GIFs aren’t limited to 256 colours.
+                 They are limited to 256 colours per frame, but are made from an arbitrary number of frames and each
+                frame can have its own palette.  Converting animations with lots of colours to GIF is quite a fun
+                subject and there are lots of fun tools to do it in various ways.</p>
+                <p>But the chap said that all the GIFs of the content were megabytes in size, but his
+                PNG+javascript was only 100KB.</p>
+                <p>Luckily, what looks like his test vector is in the <a href="https://github.com/sublimehq/anim_encoder/tree/master/example">github</a> project.  So
+                its just to make a classic proper GIF of these PNG frames and see how big it would be…</p>
+                <p>Using Imagemagick, that’d be:</p>
+                <pre>convert -delay 20 -loop 0 screen_66030*.png -layers Optimize test.gif</pre>
+                <p>And the output is… drumroll please!  <em><strong>100KB</strong></em>.</p>
+                <p>And here it is:</p>
+                <p><a href="https://i.imgur.com/lNI4Ncc.gif"><img alt="image" src="https://i.imgur.com/lNI4Ncc.gif"/></a></p>
+                <p>(click for original size)</p>
+                <p>So why not just use GIF after all?</p>
+                <p>This all reminds me of when I wrote a custom animation format for the splash screens of
+                Motorola phones, but that was quite a bit different under the hood and perhaps that’d make a
+                nice future blog post ;)</p>
+                <p>Where I could see client-side animation making sense is for animating screen recordings that
+                contain composition of semi-transparent layers.  The recording of the screen would work best if it
+                recorded draw-ops rather than bitmaps.  I did something like this at UIQ/Symbian for <a href="post/13316924653.html">Content
+                Embedding</a> and the Transition Engine.</p>
+            </post-body>
+ <button class="page-link" onclick="window.location='lang.html#66265513623'">lang</button>  <button class="page-link" onclick="window.location='index1.html#66265513623'">index</button> 
+    <span class="post-metadata"><i>posted 2013-11-07</i></span>
+</div>
+</div>
+</div>
+
+
+<div class="column">
+    <div class="page-map">
+        <h1 style="text-align: center">jump to &darr;</h1>
+        <hr/>
+        
+            <div class="page-link" onclick="window.location='index.html'">main&nbsp;page&nbsp;&uarr;</div>
+            <hr/>
+        
+        
+            
+
+
+        
+            
+
+    <div class="page-map-branch">
+    <b>performance</b>
+        
+            <img class="feather" src="static/icons/bar-chart-2.svg"/>
+        
+        
+            <div class="page-map-section">
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/172424230628.html'">Faster searches with non-prefix fields in composite indices</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/160628887798.html'">Compressing MySQL databases</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/53836725910.html'">What highscalability.com says about Scaling my Server</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/53751799442.html'">Scaling my Server: follow-up</div>
+                
+            
+                
+                    <div class="page-link" onclick="window.location='perf.html'">more&nbsp;&rarr;</div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+        
+    </div>
+
+
+        
+            
+
+    <div class="page-map-branch">
+    <b>old classics</b>
+        
+            <img class="feather" src="static/icons/book-open.svg"/>
+        
+        
+            <div class="page-map-section">
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/49786413417.html'">The kid&#39;s computer</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/37291851878.html'">Making the History of Worlds Religions map</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/25564136097.html'">If you defend those involved in the OpenGL ES specification, you are an idiot</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/25426541504.html'">Stackoverflow unwinding?</div>
+                
+            
+                
+                    <div class="page-link" onclick="window.location='classic.html'">more&nbsp;&rarr;</div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+        
+    </div>
+
+
+        
+            
+
+    <div class="page-map-branch">
+    <b>general</b>
+        
+            <img class="feather" src="static/icons/terminal.svg"/>
+        
+        
+            <div class="page-map-section">
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/134911547413.html'">Why Swift?</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/94734034483.html'">Python annotations and type checking</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/86488099258.html'">pycon 2014 Sweden: the bad bits</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/78636919764.html'">Table-based Template Translation in C++</div>
+                
+            
+                
+                    <div class="page-link" onclick="window.location='lang.html'">more&nbsp;&rarr;</div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+        
+    </div>
+
+
+        
+            
+
+    <div class="page-map-branch">
+    <b>recreation</b>
+        
+            <img class="feather" src="static/icons/youtube.svg"/>
+        
+        
+            <div class="page-link" onclick="window.location='rec.html'">all&nbsp;&rarr;</div>
+            <div class="page-map-section">
+            
+                
+
+    <div class="page-map-branch">
+    <b>games programming</b>
+        
+            <img class="feather" src="static/icons/play.svg"/>
+        
+        
+            <div class="page-map-section">
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/57140204975.html'">Perlin Noise</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/57181055984.html'">Perlin Noise</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/53831974133.html'">Drawing RTS maps fast</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/49797579721.html'">WillCity update</div>
+                
+            
+                
+                    <div class="page-link" onclick="window.location='game.html'">more&nbsp;&rarr;</div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+        
+    </div>
+
+
+            
+                
+
+    <div class="page-map-branch">
+    <b>ludum-dare</b>
+        
+        
+            <div class="page-map-section">
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/143376853353.html'">Ludum Dare #35 Mosaic</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/127137593983.html'">LudumDare 33 wallpapers</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/117234199303.html'">SSIM vs MSE for Mosaics</div>
+                
+            
+                
+                    <div class="page-map-leaf" onclick="window.location='post/97634254788.html'">Ludum Dare 30 results are in!</div>
+                
+            
+                
+                    <div class="page-link" onclick="window.location='ludum-dare.html'">more&nbsp;&rarr;</div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </div>
+        
+    </div>
+
+
+            
+            </div>
+        
+    </div>
+
+
+        
+        
+    </div>
+</div>
+</body>
+</html>
